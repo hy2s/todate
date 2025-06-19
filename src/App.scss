@@ -1,0 +1,331 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+  letter-spacing: -0.02em;
+}
+html {
+  font-size: 62.5%; // 10px이 기준이 됨
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  url(./images/img-02.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding: 6rem;
+}
+// .dark {
+  //   color: 
+  // }
+  
+  .app {
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    color: rgba($color: #ffffff, $alpha: 0.8);
+  }
+  
+  .weather-wrap {
+    width: 12%;
+    ul {
+      li {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        h3 {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+        img {
+          width: 5rem;
+          
+        }
+      }
+  }
+}
+
+.none {
+  font-size: 3.5;
+}
+
+.main-wrap {
+  // background-color: aquamarine;
+  padding: 9rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  * {
+    text-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.2);
+  }
+  .main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    h3 {
+      font-size: clamp(1.5rem, 2.5vw, 4rem);
+      font-weight: 500;
+    }
+    .time {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      h1 {
+        width: clamp(5rem, 9.5vw, 17rem);
+        font-size: clamp(3rem, 7vw, 12.5rem);
+        font-weight: 800;
+      }
+      h2 {
+        font-size:clamp(3rem, 7vw, 12.5rem);
+      }
+    }
+    .quote {
+      h3{
+        font-size: clamp(1rem, 1.5vw, 3rem);
+        font-weight: 300;
+      }
+    }
+  }
+  .box-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .wrap {
+    display: flex;
+    width: 25vw;
+    height: 40rem;
+    padding: 40px;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 20px;
+    border: 0.1px solid rgba($color: #FFF, $alpha: 0.2);
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(25px);
+    p {
+      margin-top: 7rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba($color: #fff, $alpha: 0.5);
+    }
+    h2 {
+      font-size: 3.5rem;
+    }
+    form {
+      width: 100%;
+      padding: 3px 12px;
+      border-bottom: 1px solid #fff;
+      display: flex;
+      justify-content: space-between;
+      input {
+        font-size: 2.3rem;
+        width: 90%;
+        background: none;
+        border: none;
+        outline: none;
+        color: inherit;
+        &::placeholder {
+          font-weight: 100;
+          color: inherit;
+          opacity: 50%;
+        }
+      }
+      button {
+        width: 40px;
+        height: 40px;
+        color: inherit;
+        background: none;
+        border: none;
+        font-size: 3rem;
+        line-height: 3rem;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba($color: #FFF, $alpha: 0.2);
+          border-radius: 50px;
+        }
+      }
+    }
+    ul {
+      width: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &::-webkit-scrollbar-track{
+      background: none;
+      }
+      input {
+        transform: scale(1.5);
+      }
+      li {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 2.3rem;
+      }
+      .delete-btn {
+        font-weight: 200;
+        color: rgba($color: #fff, $alpha: 0.5)
+      }
+    }
+  }
+  .memo {
+    gap: 0.8rem;
+    padding: 40px;
+    .memo-title {
+      padding: 0 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .btn-wrap {
+        display: flex;
+        gap: 1rem;
+        button {
+          width: 60px;
+          height: 60px;
+          cursor: pointer;
+          background: none;
+          border: none;
+          color: inherit;
+          font-size: 3rem;
+          transition: 0.5s;
+          &:hover{
+            background-color: rgba($color: #FFF, $alpha: 0.2);
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+    textarea {
+      font-size: 2.3rem;
+      line-height: 1.5;
+      width: 100%;
+      height: 4rem;
+      min-height: 10.5em;
+      overflow-y: auto;
+      background: none;
+      border: none;
+      outline: none;
+      color: inherit;
+      resize: none;
+      &::placeholder {
+        font-weight: 100;
+        color: inherit;
+        opacity: 50%;
+      }
+    }
+  }
+}
+
+
+
+
+.login {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  form {
+    height: 5rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 35px;
+    input {
+      background: none;
+      border: none;
+      width: 90%;
+      font-size: 23px;
+      font-weight: 300;
+      color: inherit;
+      &::placeholder {
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    button {
+      font-size: 2.5rem;
+      color: inherit;
+      background: none;
+      border: none;
+      width: 10%;
+    }
+  }
+} 
+
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.side {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: right;
+  }
+  .side-btnwrap {
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    gap: 1.2rem;
+    button {
+      padding: 1rem 1.5rem;
+      display: inline-block;
+      cursor: pointer;
+      border: none;
+      border-radius: 50px;
+      background: none;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: inherit;
+      text-align: right;
+      transition: 0.5s;
+      &:hover {
+        background-color: rgba($color: #FFF, $alpha: 0.2);
+      }
+    }
+  }
+}
